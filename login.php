@@ -40,7 +40,7 @@ if (isset($_POST['btnLogin'])) {
     $row = mysqli_fetch_assoc($result);
     $_SESSION['uname'] = $row['Username'];
 
-    header('Location: index.php');
+    header('Location: landing.php');
 
     exit();
   }
