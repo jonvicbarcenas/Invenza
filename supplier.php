@@ -41,11 +41,6 @@
         if (mysqli_num_rows($result) > 0) {
             echo "<script>alert('Supplier already exists.');</script>";
         } else {
-            $supplierName = mysqli_real_escape_string($con, $supplierName);
-            $contactPerson = mysqli_real_escape_string($con, $contactPerson);
-            $phoneNumber = mysqli_real_escape_string($con, $phoneNumber);
-            $email = mysqli_real_escape_string($con, $email);
-    
             $sql = "INSERT INTO Supplier (SupplierName, ContactPerson, PhoneNumber, Email) 
                     VALUES ('$supplierName', '$contactPerson', '$phoneNumber', '$email')";
     
